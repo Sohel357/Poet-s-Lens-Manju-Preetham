@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>K. Manju Preetham - Official Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong|Inconsolata">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine|3d-float">
+  <meta name="keywords" content="K. Manju Preetham, Poet, Author, Poetry, Books" />
+  <style>
+    /* --- General Reset and Body Styling (Maintained from Original) --- */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Trirong", serif;
+      margin: 0;
+    }
+
+    /* --- Slideshow Styling (Maintained from Original) --- */
+    .mySlides {
+      display: none;
+    }
+    .simg {
+      vertical-align: middle;
+      max-height: 500px; /* Added to constrain image height in slideshow */
+      object-fit: cover; /* Added for better image fit */
+    }
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+    .Fist {
+      margin-left: 70px;
+      padding: 20px;
+    }
+    .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    .active {
+      background-color: #717171;
+    }
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    @keyframes fade {
+      from {
+        opacity: .4
+      }
+      to {
+        opacity: 1
+      }
+    }
+
+    /* --- Header/Logo Title (Modified for Poet) --- */
+    .header {
+      padding: 80px;
+      text-align: center;
+      color: white;
+      /* New Poetry-Themed Background Image */
+      background-image: url("https://images.unsplash.com/photo-1517436067975-d143c7b8c7e9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+      min-height: 500px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .header h1 {
+      font-size: 40px;
+      background-color: rgba(0, 0, 0, 0.5); /* Added for better text visibility */
+      padding: 10px;
+      display: inline-block;
+    }
+    .header h5 {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 5px;
+      display: inline-block;
+    }
+
+    /* --- Navigation Bar (Maintained from Original) --- */
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+    }
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+    .navbar a.right {
+      float: right;
+    }
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    /* --- Column Container (Maintained from Original) --- */
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .side {
+      flex: 30%;
+      text-align: center;
+      background-color: #f1f1f1;
+      padding: 20px;
+    }
+    .caption {
+      text-align: center;
+      background-color: #808080;
+      color: white;
+      padding: 10px;
+      font-family: "Sofia", serif;
+    }
+    .main {
+      flex: 70%;
+      background-color: white;
+      padding: 20px;
+    }
+    .tribute { /* Used for #about content block */
+      padding: 20px; /* Reduced padding slightly for text content */
+      text-align: left;
+    }
+    .quote { /* Used for inspirational quote block */
+      font-family: "Audiowide", sans serif;
+      padding: 60px;
+      border-radius: 40px;
+      background-color: #C0C0C0;
+      text-align: left;
+    }
+    .tts { /* Used for Dedication block */
+      font-family: "Audiowide", sans serif;
+      padding: 60px;
+      border-radius: 40px;
+      background-color: #C0C0C0;
+      text-align: left;
+    }
+    .inspire1 {
+      text-align: left;
+    }
+    .inspire2 {
+      text-align: right;
+    }
+
+    /* --- Image Styling (Modified for Poet) --- */
+    .img1 {
+      width: 80%; /* Increased for better display of author photo */
+      height: auto;
+      padding: 10px;
+      border-radius: 50%; /* New: Added for a softer, professional look */
+    }
+
+    /* --- Book List Styling (New: Adapted from original image styles) --- */
+    #books h1, #books h2 {
+        text-align: center;
+    }
+    .book-item {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        background-color: white;
+        border-radius: 8px;
+        text-align: left;
+    }
+    .book-item img {
+        width: 100px;
+        height: 150px;
+        object-fit: cover;
+        margin-right: 20px;
+        border: 1px solid #333;
+    }
+    .book-details {
+        flex-grow: 1;
+    }
+    .book-details strong {
+        font-size: 1.2em;
+        display: block;
+        margin-bottom: 5px;
+    }
+    .book-details a {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 8px 15px;
+        background-color: #333;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    .book-details a:hover {
+        background-color: #555;
+    }
+    .book-list {
+        list-style: none;
+        padding: 0;
+    }
+    .book-list li {
+        margin-bottom: 20px;
+    }
+
+    /* --- Certificate/Award Styling (New: Adapted from original image styles) --- */
+    #certificates h1, #certificates h2 {
+        text-align: center;
+    }
+    .cert-list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+    }
+    .cert-list li {
+        width: 30%;
+        margin: 10px 5px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        background-color: white;
+        border-radius: 8px;
+    }
+    .cert-list img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+    }
+
+    /* --- Footer (Maintained and Modified from Original) --- */
+    .footer {
+      padding: 20px;
+      text-align: center;
+      background: #222;
+      color: #FFF;
+    }
+    .name {
+      font-family: 'Tangerine', serif;
+      font-size: 48px;
+      text-shadow: 4px 4px 4px #aaa;
+    }
+    .fa {
+      padding: 10px;
+      font-size: 10px;
+      width: 40px; /* Increased size */
+      height: 40px; /* Increased size */
+      line-height: 20px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 50%; /* Made them circular */
+      margin: 0 5px;
+    }
+    .fa:hover {
+      opacity: 0.9;
+      transform: scale(1.1);
+    }
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+    .fa-linkedin {
+      background: #007bb5;
+      color: white;
+    }
+    .fa-instagram {
+      background: #dd4b39;
+      color: white;
+    }
+    .fa-youtube { /* Added YouTube for the poet */
+        background: #bb0000;
+        color: white;
+    }
+    .fa-github {
+      background: #2c4762;
+      color: white;
+    }
+
+    /* --- Responsive Layout (Maintained from Original) --- */
+    @media screen and (max-width: 700px) {
+      .row {
+        flex-direction: column;
+      }
+      .book-item {
+        flex-direction: column;
+        text-align: center;
+      }
+      .book-item img {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+      .cert-list li {
+        width: 45%;
+      }
+    }
+    @media screen and (max-width: 400px) {
+      .navbar a {
+        float: none;
+        width: 100%;
+      }
+      .cert-list li {
+        width: 90%;
+      }
+    }
+
+    /* --- Font & Text Styles (Maintained from Original) --- */
+    .fot {
+      font-family: 'Inconsolata', serif;
+      font-size: 20px;
+    }
+    /* Assuming MyWebFont is not locally available, keeping fallback */
+    .con {
+      font-family: 'MyWebFont', monospace;
+      font-weight: normal;
+    }
+    .letter {
+      letter-spacing: 2px;
+    }
+    .ls {
+      letter-spacing: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="para">
+    <div class="header">
+      <h1><u><strong>Mr. K. Manju Preetham</strong></u></h1>
+      <h5>Award-Winning Poet, Author, and Literary Voice.</h5>
+    </div>
+  </div>
+
+  <div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#books">Books & Awards</a>
+    <a href="#down" class="right">Contact</a>
+  </div>
+
+  <div class="Fist">
+    <h2 id="home">POETRY'S SOUL <br> WELCOME TO THE WORLD OF VERSE</h2>
+    <p>
+      Where words weave worlds and verses breathe life — a journey through poetry’s soul.
+    </p>
+    <p class="intro-text">
+        Welcome to the official site of Mr. K. Manju Preetham, award-winning poet and author of multiple celebrated books. Explore his works, view the gallery of moments, and discover the accolades that mark a career of inspiration.
+    </p>
+    <div class="poem-title-wrapper" aria-label="Featured poem title">
+      <div class="poem-title"> “Echoes of the Silent Moon” </div>
+    </div>
+  </div>
+
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img class="simg" src="https://images.unsplash.com/photo-1544773228-c104e12e75e1?q=80&w=2070&auto=format&fit=crop" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img class="simg" src="https://images.unsplash.com/photo-1521568289771-ff44b9319e7a?q=80&w=2070&auto=format&fit=crop" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img class="simg" src="https://images.unsplash.com/photo-1520697222861-7be936fdf151?q=80&w=2070&auto=format&fit=crop" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 4</div>
+      <img class="simg" src="https://images.unsplash.com/photo-1544716278-ca65e3a89e47?q=80&w=2070&auto=format&fit=crop" style="width:100%">
+    </div>
+  </div>
+  <br>
+  <div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+  <script>
+    let slideIndex = 0;
+    showSlides();
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+  </script>
+  <hr>
+
+  <div class="row">
+    <div class="side">
+      <div id="about">
+        <h2>About Mr. K. Manju Preetham</h2>
+        <h4>Official Photo:</h4>
+        <img class="img1" src="https://media.licdn.com/dms/image/D5603AQGFyWFq6A3Ccw/profile-displayphoto-shrink_400_400/0/1672315959040?e=1678924800&v=beta&t=rthVHjcYSYHTcq4-ZMYSvKqsFSMrYpktB0e8TEQMF_U">
+        <hr>
+        <div class="caption"><i>
+            Acclaimed poet, author, and literary voice whose words resonate with the soul.
+          </i>
+        </div>
+        <hr>
+
+        <div class="tribute">
+          <p>
+            Manju Preetham is an acclaimed poet whose words resonate with the soul. With numerous awards and widely published books, his poetic journey reflects the beauty and complexity of human emotion.
+          </p>
+          <p>
+            Manju Preetham's work has been celebrated in literary circles worldwide, inspiring readers with evocative verses that challenge the ordinary.
+          </p>
+        </div>
+        <hr>
+
+        <div class="quote">
+          <span style="font-size:150px;line-height:0.6em;opacity:0.2">❝</span>
+          <div class="inspire1">
+            <h3><strong>
+                A poem begins in delight and ends in wisdom.
+              </strong></h3>
+          </div>
+          <div class="inspire2">
+            - Robert Frost (Poet's Inspiration)
+          </div>
+        </div>
+        <hr>
+
+        <h1 id="books"><u>Certificates & Awards </u>:-</h1>
+        <hr>
+        <div id="certificates">
+          <ul class="cert-list" aria-label="List of certificates and awards">
+            <li>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Golden_star.svg/120px-Golden_star.svg.png" alt="Golden Star Award Certificate" />
+              <p>Golden Star Award - **Best Poetry Anthology** (2020)</p>
+            </li>
+            <li>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Blue_ribbon_icon.svg/120px-Blue_ribbon_icon.svg.png" alt="Blue Ribbon Certificate" />
+              <p>Blue Ribbon Award for **Literary Excellence** (2019)</p>
+            </li>
+            <li>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Silver_medal_icon.svg/120px-Silver_medal_icon.svg.png" alt="Silver Medal Certificate" />
+              <p>Silver Medal in **National Poetry Contest** (2021)</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <h1 id="books"><u>Books Published </u>:-</h1>
+      <hr>
+      <div id="books">
+        <ul class="book-list" aria-label="List of published books">
+          <li>
+            <div class="book-item">
+              <img src="https://www.theriseinsight.com/wp-content/uploads/2023/01/posters-1-e1672987173808.jpg" alt="Thanega Pranam Book Cover">
+              <div class="book-details">
+                <strong>Thanega Pranam</strong>
+                <p>Manjupreetham Kuntamukkala – 1 January 2023</p>
+                <a href="https://www.amazon.in/dp/8195839541?ref=cm_sw_r_ffobk_cso_wa_apin_dp_DKVCV6CGB069M89ARBQ0&ref_=cm_sw_r_ffobk_cso_wa_apin_dp_DKVCV6CGB069M89ARBQ0&social_share=cm_sw_r_ffobk_cso_wa_apin_dp_DKVCV6CGB069M89ARBQ0&bestFormat=true" target="_blank" rel="noopener">Buy Now</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="book-item">
+              <img src="https://m.media-amazon.com/images/I/618bkXhYaKL._UF1000,1000_QL80_.jpg" alt="Mini Pen Poems Book Cover">
+              <div class="book-details">
+                <strong>Mini Pen Poems</strong>
+                <p>Manju Preetham Kuntamukkala – 14 October 2024</p>
+                <a href="https://www.amazon.in/dp/B0DK2FR12M?ref=cm_sw_r_ffobk_cso_wa_apin_dp_1ZHKZJ0608YP524Z7G8W&ref_=cm_sw_r_ffobk_cso_wa_apin_dp_1ZHKZJ0608YP524Z7G8W&social_share=cm_sw_r_ffobk_cso_wa_apin_dp_1ZHKZJ0608YP524Z7G8W&bestFormat=true" target="_blank" rel="noopener">Buy Now</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="book-item">
+              <img src="https://m.media-amazon.com/images/I/517nCrqTjnL._AC_SY200_QL15_.jpg" alt="ANTI DOSE Book Cover">
+              <div class="book-details">
+                <strong>ANTI DOSE</strong>
+                <p>In Varanasi, Devi plays a key role in unraveling a sinister operation... (February 2025)</p>
+                <a href="https://www.amazon.in/ANTI-DOSE-MANJU-PREETAM-KUNTAMUKKALA/dp/B0DVYR87GC" target="_blank" rel="noopener">Buy Now</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="book-item">
+              <img src="https://m.media-amazon.com/images/I/71eXY5z3pLL._UF1000,1000_QL80_.jpg" alt="Anti-Dose Kindle Edition Book Cover">
+              <div class="book-details">
+                <strong>Anti-Dose: The Story of Society Drugs</strong>
+                <p>A thought-provoking mirror to our normalized realities.</p>
+                <a href="https://amzn.in/d/cbHKea2" target="_blank" rel="noopener">Buy Now</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="book-item">
+              <img src="https://m.media-amazon.com/images/I/71oocB9Q5FL._SL1280_.jpg" alt="शतायु शुभकामनाएँ (Hindi Edition) Book Cover">
+              <div class="book-details">
+                <strong>शतायु शुभकामनाएँ (Hindi Edition)</strong>
+                <p>"शतकाकांक्षा" — डॉ. कुंटमुक्काला मंजू प्रीतम की कविताओं का संग्रह.</p>
+                <a href="https://www.amazon.in/%E0%A4%B6%E0%A4%A4%E0%A4%BE%E0%A4%AF%E0%A5%81-%E0%A4%B6%E0%A5%81%E0%A4%AD%E0%A4%95%E0%A4%BE%E0%A4%AE%E0%A4%A8%E0%A4%BE%E0%A4%8F%E0%A4%81-Hindi-%E0%A4%95%E0%A5%81%E0%A4%82%E0%A4%9F%E0%A4%AE%E0%A4%81%E0%A4%95%E0%A5%8D%E0%A4%95%E0%A4%BE%E0%A4%B2%E0%A4%BE-%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A5%80%E0%A4%A4%E0%A4%AE-ebook/dp/B0FL7Q3YST" target="_blank" rel="noopener">Buy Now</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <hr>
+
+      <div id="gallery">
+        <h2>Photo Gallery</h2>
+        <p>A collection of moments from book signings, literary events, and inspirations.</p>
+        <div class="gallery-images" style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+          <img style="width: 45%; margin-bottom: 10px;" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Poet reading at a literary festival" />
+          <img style="width: 45%; margin-bottom: 10px;" src="https://images.unsplash.com/photo-1520697222861-7be936fdf151?auto=format&fit=crop&w=400&q=80" alt="Book signing event with fans" />
+          <img style="width: 45%; margin-bottom: 10px;" src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=400&q=80" alt="Poetry book covers on a table" />
+          <img style="width: 45%; margin-bottom: 10px;" src="https://images.unsplash.com/photo-1464375117522-1311f143e2b9?auto=format&fit=crop&w=400&q=80" alt="Stage spotlight on poet" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <div class="Hero">
+    <div class="tts">
+      <h2>A Life Dedicated to <br>The Art of Verse.</h2>
+      <h3>"Your words are a beacon, your stories a legacy, you are cherished in the hearts of your readers."</h3>
+    </div>
+  </div>
+  <hr>
+
+  <div class="footer">
+    <footer class="text-center">
+      <div class="letter">
+        <h2 class="con">Connect with the Author</h2><br>
+      </div>
+      <div class="name">K. Manju Preetham.</div><br>
+      <a href="https://drive.google.com/file/d/1tpwIjTInDJ3YkLqsH8QJCySTJHwFWe_Q/view?usp=sharing">
+        <br>
+        <img
+          src="https://media.licdn.com/dms/image/D5603AQGFyWFq6A3Ccw/profile-displayphoto-shrink_400_400/0/1672315959040?e=1678924800&v=beta&t=rthVHjcYSYHTcq4-ZMYSvKqsFSMrYpktB0e8TEQMF_U"
+          alt="Manju" width="140px" height="130px" style="border-radius: 50%;">
+      </a><br>
+      <div id="down">
+        <center>
+          <a href="https://www.facebook.com/share/179osyWWap/?mibextid=wwXIfr" class="fa fa-facebook" target="_blank" rel="noopener"></a>
+          <a href="YOUR_LINKEDIN_URL" class="fa fa-linkedin" target="_blank" rel="noopener"></a>
+          <a href="https://www.youtube.com/@manjupreetham" class="fa fa-youtube" target="_blank" rel="noopener"></a>
+          <a href="https://www.instagram.com/poet_manjupreetham?utm_source=ig_web_button_share_sheet&igsh=ODdmZWVhMTFiMw==" class="fa fa-instagram" target="_blank" rel="noopener"></a>
+        </center>
+        <div class="fot">
+          <br>
+          <center>
+            <p class="ls">All Rights Are Reserved <br>
+            <div class="ls">Copyright © 2022-2060.</div>
+            </p>
+            Privacy Policy | Cookies Policy | Terms of Use<center>
+            </center>
+            <div>
+            </div>
+        </div>
+    </footer>
+  </div>
+</body>
+</html>
